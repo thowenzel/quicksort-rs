@@ -1,0 +1,6 @@
+[package]
+name = "quicksort-rs"
+version = "0.1.0"
+authors = ["Thomas Wenzel <thowenzel@googlemail.com>"]
+
+[dependencies]
