@@ -1,7 +1,22 @@
-use std::fs::{File, OpenOptions};
+/// quicksort-rs
+/// A little tool to sort string given in an input file and writes the sorted string back
+
+use std::fs::{File};
 use std::io::{Read, BufReader, Write};
+use std::env;
 
 fn main() {
+
+
+    let args: Vec<String> = env::args().collect();
+
+    // The first argument is the path that was used to call the program.
+    println!("My path is {}.", args[0]);
+
+    // The rest of the arguments are the passed command line parameters.
+    println!("I got {:?} arguments: {:?}.", args.len() - 1, &args[1..]);
+
+
     let mut data = String::new();
     let fin = File::open("test.txt").expect("Unable to open file");
     let mut br = BufReader::new(fin);
